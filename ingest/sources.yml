@@ -1,0 +1,29 @@
+# Where each raw table comes from.
+# CMS URLs are looked up automatically from the CMS catalog (https://data.cms.gov/data.json)
+# by dataset title. If the lookup fails (titles change), paste the CSV link per year
+# into `overrides` (copy it from the dataset's "Download" button on data.cms.gov).
+
+cms_catalog_url: https://data.cms.gov/data.json
+
+partd_prescriber_drug:
+  catalog_title: "Medicare Part D Prescribers - by Provider and Drug"
+  overrides: {}      # e.g. {2024: "https://data.cms.gov/sites/default/files/....csv"}
+
+partd_prescriber:
+  catalog_title: "Medicare Part D Prescribers - by Provider"
+  overrides: {}
+
+medicare_enrollment:
+  catalog_title: "Medicare Monthly Enrollment"
+  override: null     # single file, all years
+
+chronic_conditions:
+  catalog_title: "Specific Chronic Conditions"
+  overrides: {}
+
+places_county:
+  # CDC PLACES County Data, 2025 release (Socrata id swc5-untb)
+  url: "https://data.cdc.gov/resource/swc5-untb.csv?$where=measureid%20in('DIABETES','OBESITY')&$limit=50000"
+
+zcta_county:
+  url: "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
