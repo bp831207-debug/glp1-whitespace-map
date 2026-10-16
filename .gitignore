@@ -1,0 +1,15 @@
+data/*
+!data/.gitkeep
+*.duckdb
+*.duckdb.wal
+*.parquet
+.venv/
+__pycache__/
+.pytest_cache/
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+logs/
+.ipynb_checkpoints/
+.DS_Store
+dbt/.user.yml
