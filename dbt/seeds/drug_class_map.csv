@@ -1,0 +1,22 @@
+pattern,drug_class,molecule,is_glp1,priority
+tirzepatide,GLP-1 RA,tirzepatide,true,1
+semaglutide,GLP-1 RA,semaglutide,true,1
+dulaglutide,GLP-1 RA,dulaglutide,true,1
+liraglutide,GLP-1 RA,liraglutide,true,1
+exenatide,GLP-1 RA,exenatide,true,1
+lixisenatide,GLP-1 RA,lixisenatide,true,1
+empagliflozin,SGLT2,empagliflozin,false,2
+dapagliflozin,SGLT2,dapagliflozin,false,2
+canagliflozin,SGLT2,canagliflozin,false,2
+ertugliflozin,SGLT2,ertugliflozin,false,2
+bexagliflozin,SGLT2,bexagliflozin,false,2
+sitagliptin,DPP-4,sitagliptin,false,3
+saxagliptin,DPP-4,saxagliptin,false,3
+linagliptin,DPP-4,linagliptin,false,3
+alogliptin,DPP-4,alogliptin,false,3
+insulin,Insulin,insulin,false,4
+pioglitazone,TZD,pioglitazone,false,5
+glipizide,Sulfonylurea,glipizide,false,6
+glimepiride,Sulfonylurea,glimepiride,false,6
+glyburide,Sulfonylurea,glyburide,false,6
+metformin,Metformin,metformin,false,7
