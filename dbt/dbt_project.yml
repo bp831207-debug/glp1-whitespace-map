@@ -1,0 +1,28 @@
+name: glp1_whitespace
+version: "0.1.0"
+config-version: 2
+profile: glp1_whitespace
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+vars:
+  latest_year: 2024
+  benchmark_percentile: 0.75     # county penetration benchmark
+  min_county_enrollees: 500      # counties smaller than this are excluded from the benchmark
+  hcp_min_diabetes_claims: 50    # prescribers below this are excluded from segmentation
+  hcp_volume_percentile: 0.75    # "high potential" cut-off
+  hcp_share_percentile: 0.50     # "high adoption" cut-off
+
+models:
+  glp1_whitespace:
+    staging:      {+materialized: view,  +schema: staging}
+    intermediate: {+materialized: table, +schema: intermediate}
+    marts:        {+materialized: table, +schema: marts}
+
+seeds:
+  glp1_whitespace:
+    drug_class_map:
+      +column_types: {pattern: varchar, drug_class: varchar, molecule: varchar, is_glp1: boolean, priority: integer}

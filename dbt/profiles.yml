@@ -1,0 +1,7 @@
+glp1_whitespace:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('GLP1_DB', '../data/glp1.duckdb') }}"
+      threads: 4
