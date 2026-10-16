@@ -1,0 +1,27 @@
+version: 2
+models:
+  - name: mart_brand_trends
+    description: National GLP-1 claims, cost and share by year, molecule and brand
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+  - name: mart_county_opportunity
+    description: County-year white-space gap, penetration, tiers and Bridge-readiness flag
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: opportunity_tier
+        tests:
+          - accepted_values:
+              arguments: {values: ['High', 'Medium', 'Low']}
+  - name: mart_hcp_segments
+    description: Latest-year prescriber 2×2 segmentation (target list = Untapped)
+    columns:
+      - name: npi
+        tests: [unique, not_null]
+      - name: segment
+        tests:
+          - accepted_values:
+              arguments: {values: ['Untapped', 'Champions', 'Emerging', 'Deprioritize']}
+  - name: mart_specialty_uptake
+    description: GLP-1 share of diabetes claims by prescriber specialty and year
