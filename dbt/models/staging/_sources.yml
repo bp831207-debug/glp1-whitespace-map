@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    description: Raw public files loaded by ingest/ (all columns VARCHAR, lower-case names)
+    tables:
+      - name: partd_prescriber_drug
+      - name: partd_prescriber
+      - name: medicare_enrollment
+      - name: chronic_conditions
+      - name: places_county
+      - name: zcta_county

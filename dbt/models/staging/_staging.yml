@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: stg_partd_prescriber_drug
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: npi
+        tests: [not_null]
+      - name: total_claims
+        tests: [not_null]
+  - name: stg_partd_prescriber
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+  - name: stg_zcta_county
+    columns:
+      - name: zip5
+        tests: [unique, not_null]
